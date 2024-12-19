@@ -26,11 +26,7 @@ public class AdminService {
     public void reportUsers(List<Long> userIds) {
         List<User> users = userRepository.findAllById(userIds);
         for (User user : users) {
-//            User user = userRepository.findById(userId).orElseThrow(() -> new IllegalArgumentException("해당 ID에 맞는 값이 존재하지 않습니다."));
-
             user.updateStatusToBlocked();
-
-//            userRepository.save(user);
         }
         userRepository.saveAll(users);
     }
