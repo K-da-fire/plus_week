@@ -52,4 +52,7 @@ jobs:
                 kill -9 $pid
               fi
             done
-            echo "nohup java -jar ~/*.jar > ~/app.log 2>&1 &" | at now
+            export DB_URL = {{secrets.DB_URL}}
+            export DB_USERNAME = {{secrets.DB_USERNAME}}
+            export DB_PASSWORD = {{secrets.DB_PASSWORD}}
+            nohup java -jar ~/*.jar > ~/app.log 2>&1 &
