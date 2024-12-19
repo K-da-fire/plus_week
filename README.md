@@ -238,3 +238,6 @@
 
 http://ec2-3-37-92-135.ap-northeast-2.compute.amazonaws.com:8080/
 ![img.png](img.png)
+
+http://ec2-3-37-92-135.ap-northeast-2.compute.amazonaws.com:8080/healthz
+![image2.png](image2.png)
